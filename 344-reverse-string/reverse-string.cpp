@@ -7,13 +7,5 @@ public:
             left++;
             right--;
         }
-    cout<<"[";
-    for(int i=0; i<s.size(); i++){
-        cout<<"\""<<s[i]<<"\"";
-        if(i < s.size()-1){          // If NOT last element
-            cout<<",";
-        }
-    }
-    cout<<"]";
     }
 };
