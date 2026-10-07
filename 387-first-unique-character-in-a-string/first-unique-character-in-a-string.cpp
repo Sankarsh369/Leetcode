@@ -1,16 +1,12 @@
 class Solution {
 public:
     int firstUniqChar(string s) {
-        unordered_map<char, int> count;
-        for(char x:s){
-            count[x]++;
-        }
-        for(size_t i=0; i<s.size(); i++){
-            if(count[s[i]]==1){
+        for (int i = 0; i < s.length(); i++) {
+            // If the first occurrence is equal to the last occurrence, it's unique!
+            if (s.find(s[i]) == s.rfind(s[i])) {
                 return i;
             }
         }
-
         return -1;
     }
 };
