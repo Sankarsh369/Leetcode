@@ -9,7 +9,6 @@ public:
         return a.second<b.second;
        }
     );
-    int maxkey=maxentry->first;
-    return maxkey;
+    return maxentry->first;
     }
 };
