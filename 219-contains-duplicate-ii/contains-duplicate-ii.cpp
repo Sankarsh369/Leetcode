@@ -6,7 +6,7 @@ public:
             if (numMap.find(nums[i]) != numMap.end() && i - numMap[nums[i]] <= k) {
                 return true;
             }
-            numMap[nums[i]] = i; // Update with the latest index
+            numMap[nums[i]] = i;
         }
         return false;
     }
