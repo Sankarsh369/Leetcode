@@ -1,12 +1,13 @@
 class Solution {
 public:
     int removeElement(vector<int>& nums, int val) {
-    int i = 0;
-
-    for (const int num : nums)
-      if (num != val)
-        nums[i++] = num;
-
-    return i;
+        int insertPos = 0;
+        for (int i = 0; i < nums.size(); i++) {
+            if (nums[i] != val) {
+                nums[insertPos] = nums[i];
+                insertPos++;
+            }
+        }
+        return insertPos;
     }
 };
